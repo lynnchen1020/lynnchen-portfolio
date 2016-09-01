@@ -46,7 +46,7 @@ $(document).ready(function() {
         var arr = ['.experience', '.skill', '.portfolio', '.contact'];
         for(i=0; i<arr.length; i++){
             var offsetTop = $(arr[i]).offset().top;
-            if($('body').scrollTop() > offsetTop-250){
+            if($('body').scrollTop() > offsetTop-360){
             $(arr[i]).css('opacity', '1');
             }
         }
