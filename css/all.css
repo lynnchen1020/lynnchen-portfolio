@@ -583,7 +583,6 @@ header {
 
 .portfolio {
   height: auto;
-  text-align: center;
   padding-top: 60px;
 }
 
@@ -599,14 +598,15 @@ header {
 }
 
 .portfolio-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  width: 1284px;
+  margin: 0 auto;
   margin-top: 40px;
-}
-
-.portfolio-list li {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  cursor: pointer;
 }
 
 .portfolio-list .touch {
@@ -833,7 +833,6 @@ footer p {
     margin-top: -6px;
   }
   .experience .timeline li .timeline-date {
-    position: absolute;
     left: 0px;
     top: 48px;
     font-size: 13px;
@@ -873,6 +872,9 @@ footer p {
     width: 100%;
     height: auto;
   }
+  .portfolio-list {
+    max-width: 642px;
+  }
   .portfolio-list li {
     margin-top: -5px;
   }
@@ -900,5 +902,11 @@ footer p {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .portfolio-list {
+    width: 321px;
   }
 }
